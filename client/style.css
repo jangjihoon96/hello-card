@@ -33,6 +33,7 @@
 
 .card{
   max-width: 290px;
+  width: 290px;
   min-height: 260px;
   background-color: #fff;
   border-radius: 0.5rem;
