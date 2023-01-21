@@ -1,0 +1,32 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "title": "Travel",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime enim, inventore nostrum totam, illum eligendi dignissimos quaerat aspernatur minus laudantium, voluptate beatae",
+      "url": "../../client/assets/cardbg/travel.jpg",
+      "alt": "Travel"
+    },
+    {
+      "id": 2,
+      "title": "Fashion",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime enim, inventore nostrum totam, illum eligendi dignissimos quaerat aspernatur minus laudantium, voluptate beatae",
+      "url": "../../client/assets/cardbg/fashion.jpg",
+      "alt": "Fashion"
+    },
+    {
+      "id": 3,
+      "title": "Cooking",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime enim, inventore nostrum totam, illum eligendi dignissimos quaerat aspernatur minus laudantium, voluptate beatae",
+      "url": "../../client/assets/cardbg/cooking.jpg",
+      "alt": "Cooking"
+    },
+    {
+      "id": 4,
+      "title": "Animal",
+      "desc": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime enim, inventore nostrum totam, illum eligendi dignissimos quaerat aspernatur minus laudantium, voluptate beatae",
+      "url": "../../client/assets/cardbg/animal.jpg",
+      "alt": "Animal"
+    }
+  ]
+}
