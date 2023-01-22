@@ -8,9 +8,20 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  color: var(--black);
 }
 *::before, *::after{
   box-sizing: border-box;
+}
+.a11y-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  margin-top:-1px;
+  margin-left:-1px;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
 }
 
 .container{
@@ -83,6 +94,7 @@ figcaption strong{
   display: block;
   font-weight: 500;
   font-size: var(--text-md);
+  color: var(--white)
 }
 figcaption span{
   display: block;
@@ -96,6 +108,91 @@ figcaption span{
   font-size: var(--text-sm);
   line-height: 1.5;
   color: var(--silver);
+}
+
+
+.card-description{
+  margin-top: 3rem;
+  border-top: 1px solid #dadada;
+  padding-top: 3rem;
+
+}
+.card-layout-flex{
+  display: flex;
+  flex-flow: row nowrap;
+  height: 31.25rem;
+  background-color: var(--black);
+}
+
+.card-img-box{
+  width: 50%;
+  align-self: center;
+}
+.card-img-box img{
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+.card-text-box{
+  width: 50%;
+  padding: 1.5rem 2rem;
+  height: 100%;
+  background-color: var(--white);
+}
+.card-text-box h2{
+  font-size: var(--text-md);
+}
+.card-text-box p{
+  font-size: var(--text-sm);
+  margin-top:0.5rem;
+}
+
+.comment-box{
+  background-color: #f0f0f0;
+  margin-top: 1rem;
+  padding: 1rem;
+  height: 300px;
+  overflow: scroll;
+}
+
+.profile{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.profile + .profile{
+  margin-top:1rem;
+}
+
+.profile-img{
+  width: 1.875rem;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--blue);
+  flex-shrink: 0;
+}
+.profile-img i{
+  color:#fff;
+}
+.profile-field{
+  display: flex;
+  flex-flow: row nowrap;
+  gap:1rem;
+  margin-left:0.5rem;
+  
+}
+.profile-id{
+  font-weight: 600;
+  line-height: 1.875rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.comment-content{
+  line-height: 1.5rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding:0.1875rem 1rem;
 }
 
 
