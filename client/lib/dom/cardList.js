@@ -10,7 +10,7 @@ const createCard = ({
   desc = 'desc'
 } = {}) => { 
   return /* html */`
-  <div class="card">
+  <div class="card" data-index="card-${id}">
   <figure>
     <img src="${src}" alt="${alt}" />
     <figcaption>
@@ -26,4 +26,5 @@ const createCard = ({
 export function renderCard(target,data){
   insertLast(target,createCard(data))
 }
-console.log(createCard())
+// console.log(createCard())
+

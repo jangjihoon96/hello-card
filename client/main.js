@@ -1,5 +1,5 @@
 
-import { delayP, getNode, jihoon, renderCard } from './lib/index.js'
+import { attr, delayP, getNode, getNodes, jihoon, renderCard } from './lib/index.js'
 
 
 
@@ -28,6 +28,31 @@ async function rendingCardList(){
 }
 rendingCardList();
 
+
+
+
+
+
+
+function handler(e){
+  const listItem = e.target.closest('.card');
+  const deleteButton = e.target.closest('a')
+  e.preventDefault()
+  if(!deleteButton || !listItem) return
+
+  let id = attr(listItem,'data-index').slice(5);
+  
+
+  jihoon.delete(`http://localhost:3000/cards/${id}`).then(()=>{
+    categoryListContainer.innerHTML = '';
+    rendingCardList();
+  })
+
+
+  console.log(id)
+}
+
+categoryListContainer.addEventListener('click',handler);
 
 
 
