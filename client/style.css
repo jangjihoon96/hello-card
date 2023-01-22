@@ -238,6 +238,8 @@ figcaption span{
   border: 1px solid var(--silver);
   outline: none;
   border-radius: 2rem;
+  height: 3rem;
+  padding: 1rem;
 }
 .comment-write textarea:focus{
   border: 1px solid var(--blue);

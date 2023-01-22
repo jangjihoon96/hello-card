@@ -1,5 +1,5 @@
 
-import { attr, delayP, getNode, getNodes, jihoon, renderCard } from './lib/index.js'
+import { addClass, attr, clearContents, delayP, getNode, getNodes, jihoon, removeClass, renderCard } from './lib/index.js'
 
 
 
@@ -49,10 +49,44 @@ function handler(e){
   })
 
 
-  console.log(id)
 }
 
 categoryListContainer.addEventListener('click',handler);
+
+
+
+
+
+
+
+const likeWrap = getNode('.like-wrap');
+
+let currentStatus = false;
+const likeCountNode = getNode('.like-count');
+let likeCount = Number(likeCountNode.textContent);
+let likeNumber = 0;
+function likeHandler(e){
+  
+  e.preventDefault();
+
+  let likeButton = e.target.closest('a');
+  if(!likeButton) return;
+  if(!currentStatus){
+    addClass(likeButton,'is-active');
+    clearContents(likeCountNode);
+    likeCountNode.textContent = ++likeCount;
+  } else{
+    removeClass(likeButton,'is-active')
+    clearContents(likeCountNode);
+    likeCountNode.textContent = --likeCount;
+  }
+  currentStatus = !currentStatus
+
+
+}
+
+likeWrap.addEventListener('click',likeHandler);
+
 
 
 
