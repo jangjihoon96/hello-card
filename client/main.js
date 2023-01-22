@@ -1,5 +1,5 @@
 
-import { addClass, attr, clearContents, delayP, getNode, getNodes, jihoon, removeClass, renderCard } from './lib/index.js'
+import { addClass, attr, clearContents, delayP, getNode, getNodes, insertLast, jihoon, removeClass, renderCard } from './lib/index.js'
 
 
 
@@ -64,7 +64,6 @@ const likeWrap = getNode('.like-wrap');
 let currentStatus = false;
 const likeCountNode = getNode('.like-count');
 let likeCount = Number(likeCountNode.textContent);
-let likeNumber = 0;
 function likeHandler(e){
   
   e.preventDefault();
@@ -86,6 +85,38 @@ function likeHandler(e){
 }
 
 likeWrap.addEventListener('click',likeHandler);
+
+
+
+
+
+
+
+
+const commentSendButton = getNode('.comment-send-button');
+const commentContainer = getNode('.comment-box');
+function commentSendHandler(e){
+  e.preventDefault();
+  let target = e.target.closest('a');
+  if(!target) return;
+  let textareaNode = getNode('.comment-write textarea');
+  let textareaValue = textareaNode.value;
+  const commentTemplate = /* html */`
+    <div class="profile">
+      <div class="profile-img"><i class="fa-regular fa-user" aria-label="기본프로필 사진"></i></div>
+      <div class="profile-field">
+        <div class="profile-id">장지훈</div>
+        <div class="comment-content">${textareaValue}</div>
+      </div>
+    </div>
+  `
+  insertLast(commentContainer,commentTemplate)
+  textareaNode.value = '';
+}
+
+commentSendButton.addEventListener('click',commentSendHandler);
+
+
 
 
 
