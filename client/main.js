@@ -103,15 +103,17 @@ function commentSendHandler(e){
   let textareaValue = textareaNode.value;
   const commentTemplate = /* html */`
     <div class="profile">
-      <div class="profile-img"><i class="fa-regular fa-user" aria-label="기본프로필 사진"></i></div>
+      <div class="profile-img"><i class="fa-solid fa-user" aria-label="기본프로필이미지"></i></div>
       <div class="profile-field">
         <div class="profile-id">장지훈</div>
         <div class="comment-content">${textareaValue}</div>
       </div>
     </div>
   `
-  insertLast(commentContainer,commentTemplate)
+  if(!textareaNode.value) return
+  insertLast(commentContainer,commentTemplate);
   textareaNode.value = '';
+  commentContainer.scrollTop = commentContainer.scrollHeight;
 }
 
 commentSendButton.addEventListener('click',commentSendHandler);
