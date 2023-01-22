@@ -1,0 +1,16 @@
+:root{
+  --white: #fff;
+  --black: #222;
+  --silver: #aaa;
+  --blue: dodgerblue;
+  
+  --black-opacity: rgba(0,0,0,0.6);
+
+  --text-sm: 0.875rem ;
+  --text-md: 1.5rem;
+  --text-lg: 2.25rem;
+
+  --shadow-card: 1px 1px 10px 1px rgba(0,0,0,0.2);
+
+  --container-width: 80rem;
+}
